@@ -1,6 +1,6 @@
 
 
-POST http://127.0.0.1:5000/api/autocomplete
+POST http://127.0.0.1:5000/autocomplete
 Content-Type: application/json
 
 {

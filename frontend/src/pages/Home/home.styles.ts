@@ -5,4 +5,8 @@ export const StyledContainer = styled(Stack)(({ theme }) => ({
     background: theme.custom.background,
     height: "100vh",
     padding: "0 25px",
+    "& .form": {
+        gap: "10px",
+        flexDirection: "row",
+    }
 }))

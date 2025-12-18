@@ -3,7 +3,12 @@ from flask_cors import CORS
 from api.autocomplete import autocomplete_bp
 
 app = Flask(__name__)
-CORS(app)
+
+CORS(
+    app,
+    resources={r"/api/*": {"origins": "http://localhost:5173"}},
+    supports_credentials=True
+)
 
 app.register_blueprint(autocomplete_bp, url_prefix="/api")
 
