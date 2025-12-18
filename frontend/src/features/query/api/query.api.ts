@@ -3,12 +3,12 @@ import type { QueryFormData } from '../types'
 
 export const sendQueryRequest = async (credentials: QueryFormData): Promise<any> => {
 
-  const response = await fetch(`${apiUrl}/query/send`, {
+  const response = await fetch(`${apiUrl}/autocomplete`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(credentials),
+    body: JSON.stringify({ text: credentials.query }),
   })
 
   if (!response.ok) {
